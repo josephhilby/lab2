@@ -8,6 +8,7 @@ federal_tax_data = [
     [.10, 0]
 ]
 
+
 class FederalTax:
     def __init__(self, federal_tax_rates):
         self.federal_tax_rates = federal_tax_rates
@@ -17,8 +18,8 @@ class FederalTax:
         for rate in self.federal_tax_rates:
             if income > rate[1]:
                 income_at_level = income - rate[1]
-                income -= income - rate[1]
-                owed_taxes += (income_at_level) * rate[0]
+                income -= income_at_level
+                owed_taxes += income_at_level * rate[0]
         return owed_taxes
 
 

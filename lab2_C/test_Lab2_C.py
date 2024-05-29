@@ -28,8 +28,6 @@ class LabOneATests(unittest.TestCase):
         self.temp3.convert_to_celsius()
         self.temp3.convert_from_celsius("Fahrenheit")
 
-        three = self.temp3
-
         assert round(self.temp1.degree, 1) == 232.9 and self.temp1.type == "Kelvin"
         assert round(self.temp2.degree, 1) == 20.0 and self.temp2.type == "Celsius"
         assert round(self.temp3.degree, 1) == 170.3 and self.temp3.type == "Fahrenheit"
